@@ -3,10 +3,14 @@
 
 AC_PREREQ([2.71])
 AC_INIT([gdfmanager], [0.01], [gdfmanager@twistedserpent.xyz], [gdfmanager], [https://twistedserpent.xyz])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign])
+AM_MAINTAINER_MODE([enable])
+AM_SILENT_RULES([yes])
 AC_CONFIG_SRCDIR([gdfm.c])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
+: ${CFLAGS="-Wall -O2 -g"}
 AC_PROG_CC
 
 # Checks for libraries.
